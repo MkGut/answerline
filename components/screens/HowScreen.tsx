@@ -107,7 +107,7 @@ export default function HowScreen({ navigate }: HowScreenProps) {
     <div ref={containerRef}>
       {/* DARK HEADER */}
       <div ref={heroRef} style={{ background: '#25282b', color: '#fff' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px 72px' }}>
+        <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '64px 32px 72px' }}>
           <div
             className="hero-el"
             style={{
@@ -153,9 +153,10 @@ export default function HowScreen({ navigate }: HowScreenProps) {
       </div>
 
       {/* 3-STEP CARDS */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px 24px' }}>
+      <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px 24px' }}>
         <div
           ref={stepsRef}
+          className="al-how-steps"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}
         >
           {steps.map((s) => (
@@ -189,7 +190,7 @@ export default function HowScreen({ navigate }: HowScreenProps) {
 
       {/* EMAIL ANATOMY */}
       <div style={{ background: '#f2f2f2', marginTop: 40 }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px' }}>
+        <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px' }}>
           <div
             style={{
               fontSize: 13,
@@ -215,6 +216,7 @@ export default function HowScreen({ navigate }: HowScreenProps) {
           </h2>
           <div
             ref={anatomyRef}
+            className="al-how-anat"
             style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 20 }}
           >
             {anatomy.map((a) => (
@@ -255,7 +257,7 @@ export default function HowScreen({ navigate }: HowScreenProps) {
       </div>
 
       {/* PHILOSOPHY */}
-      <div ref={quoteRef} style={{ maxWidth: 1100, margin: '0 auto', padding: '80px 32px' }}>
+      <div ref={quoteRef} className="al-shell" style={{ maxWidth: 1100, margin: '0 auto', padding: '80px 32px' }}>
         <p
           style={{
             fontSize: 'clamp(30px,4.5vw,44px)',

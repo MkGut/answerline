@@ -55,6 +55,7 @@ export default function CtaBand({ onGo }: CtaBandProps) {
   return (
     <div ref={ref} style={{ background: '#e60000', color: '#fff' }}>
       <div
+        className="al-shell"
         style={{
           maxWidth: 1280,
           margin: '0 auto',

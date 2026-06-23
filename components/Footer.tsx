@@ -24,6 +24,7 @@ export default function Footer({ navigate }: FooterProps) {
       }}
     >
       <div
+        className="al-shell"
         style={{
           maxWidth: 1280,
           margin: '0 auto',

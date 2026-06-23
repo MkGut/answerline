@@ -111,7 +111,7 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
     <div ref={containerRef}>
       {/* DARK HEADER */}
       <div style={{ background: '#25282b', color: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '56px 32px 64px' }}>
+        <div className="al-shell" style={{ maxWidth: 1100, margin: '0 auto', padding: '56px 32px 64px' }}>
           <div
             style={{
               display: 'flex',
@@ -220,11 +220,12 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
       </div>
 
       {/* CONTENT */}
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '64px 32px' }}>
+      <div className="al-shell" style={{ maxWidth: 1100, margin: '0 auto', padding: '64px 32px' }}>
 
         {/* IDENTITY + MENTAL MODEL */}
         <div
           ref={identityRef}
+          className="al-sample-identity"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1.4fr',
@@ -302,6 +303,7 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
         </div>
         <div
           ref={cluesGridRef}
+          className="al-sample-clues"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 18, marginBottom: 64 }}
         >
           {clues.map((c, i) => (
@@ -365,6 +367,7 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
         {/* TRAPS + MEMORY PHRASE */}
         <div
           ref={trapsRef}
+          className="al-sample-traps"
           style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'stretch' }}
         >
           {/* Confusion traps */}

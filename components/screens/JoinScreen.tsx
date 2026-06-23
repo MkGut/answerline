@@ -38,6 +38,7 @@ export default function JoinScreen() {
   return (
     <div ref={containerRef} style={{ background: '#25282b', color: '#fff' }}>
       <div
+        className="al-shell al-join-grid"
         style={{
           maxWidth: 1280,
           margin: '0 auto',
@@ -49,7 +50,7 @@ export default function JoinScreen() {
         }}
       >
         {/* Left — info */}
-        <div ref={infoRef} style={{ position: 'sticky', top: 96 }}>
+        <div ref={infoRef} className="al-join-info" style={{ position: 'sticky', top: 96 }}>
           <div
             className="info-el"
             style={{

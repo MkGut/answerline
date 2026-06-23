@@ -161,9 +161,10 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
     <div ref={containerRef}>
       {/* HERO */}
       <div style={{ background: '#25282b', color: '#fff' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '30px 32px 90px' }}>
+        <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '30px 32px 90px' }}>
           {/* Subject categories row */}
           <div
+            className="al-subject-row"
             style={{
               display: 'flex',
               gap: 40,
@@ -190,6 +191,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
           <div style={{ marginTop: 40 }}>
             <h1
               ref={headlineRef}
+              className="al-hero-h1"
               style={{
                 fontWeight: 800,
                 textTransform: 'uppercase',
@@ -233,7 +235,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
                 Learn the clues behind the answer — not another pile of random facts.
               </p>
 
-              <div ref={ctaBtnsRef} style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <div ref={ctaBtnsRef} className="al-hero-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Button variant="primary" size="lg" onClick={() => navigate('join')}>
                   Start training free
                 </Button>
@@ -247,7 +249,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
       </div>
 
       {/* TODAY'S ANSWERLINE TEASER */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px 24px' }}>
+      <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 32px 24px' }}>
         <div
           style={{
             display: 'flex',
@@ -286,7 +288,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
           </button>
         </div>
 
-        <div ref={teaserRef} style={{ display: 'grid', gridTemplateColumns: '1.15fr .85fr', gap: 24, alignItems: 'stretch' }}>
+        <div ref={teaserRef} className="al-home-teaser" style={{ display: 'grid', gridTemplateColumns: '1.15fr .85fr', gap: 24, alignItems: 'stretch' }}>
           {/* Left card */}
           <div
             style={{
@@ -407,12 +409,13 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
       </div>
 
       {/* CATEGORIES */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '56px 32px 16px' }}>
+      <div className="al-shell" style={{ maxWidth: 1280, margin: '0 auto', padding: '56px 32px 16px' }}>
         <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 20 }}>
           Four categories to train
         </div>
         <div
           ref={categoriesRef}
+          className="al-home-cats"
           style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20 }}
         >
           {categories.map((cat) => (
@@ -499,7 +502,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
           Recognition
         </div>
 
-        <div style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', padding: '120px 32px 80px' }}>
+        <div className="al-shell al-learn-wrap" style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', padding: '120px 32px 80px' }}>
           {learnRows.map((row, i) => (
             <button
               key={i}
@@ -549,6 +552,7 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
                   {row.tag}
                 </span>
                 <span
+                  className="al-learn-title"
                   style={{
                     display: 'block',
                     fontSize: 30,

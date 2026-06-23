@@ -28,3 +28,105 @@ html {
 .will-animate {
   will-change: transform, opacity;
 }
+
+/* =====================================================================
+   Mobile responsiveness layer
+   ---------------------------------------------------------------------
+   Everything below only takes effect at <= 860px (the breakpoint named
+   in project_specs.md). Desktop (> 860px) is completely untouched and
+   renders exactly as before. The class hooks (.al-*) are added to the
+   existing components; their inline desktop styles are unchanged.
+   ===================================================================== */
+
+/* Hidden on desktop by default — only surfaced inside the mobile query */
+.al-nav-burger { display: none; }
+.al-nav-panel { display: none; }
+
+@media (max-width: 860px) {
+  /* Tighter side gutters on every page shell */
+  .al-shell {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* --- Navigation: swap the desktop link row for a hamburger menu --- */
+  .al-nav-links { display: none !important; }
+  .al-nav-burger {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 8px;
+    margin: -8px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .al-nav-panel {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.32s ease, opacity 0.24s ease;
+  }
+  .al-nav-panel.open {
+    max-height: 380px;
+    opacity: 1;
+  }
+
+  /* --- Home --- */
+  .al-subject-row { gap: 18px !important; }
+  .al-home-teaser { grid-template-columns: 1fr !important; }
+  .al-home-cats { grid-template-columns: repeat(2, 1fr) !important; }
+  .al-learn-wrap {
+    padding-top: 92px !important;
+    padding-bottom: 60px !important;
+  }
+  .al-learn-title { font-size: 23px !important; }
+
+  /* --- How it works --- */
+  .al-how-steps { grid-template-columns: 1fr !important; }
+  .al-how-anat { grid-template-columns: 1fr !important; }
+
+  /* --- Sample lesson --- */
+  .al-sample-identity {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .al-sample-clues { grid-template-columns: 1fr !important; }
+  .al-sample-traps { grid-template-columns: 1fr !important; }
+
+  /* --- Join: stack the info above the signup form --- */
+  .al-join-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .al-join-info {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .al-shell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* One column for category cards on small phones */
+  .al-home-cats { grid-template-columns: 1fr !important; }
+
+  /* Scale the big hero headline down so it never overflows */
+  .al-hero-h1 {
+    font-size: clamp(46px, 15vw, 96px) !important;
+    letter-spacing: -1px !important;
+  }
+
+  /* Full-width, easy-to-tap hero CTAs */
+  .al-hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+  }
+  .al-hero-cta > button { width: 100% !important; }
+}

@@ -4,7 +4,6 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import AnswerOrb from '../AnswerOrb'
 import CtaBand from '../CtaBand'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -172,7 +171,6 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
             className="hero-el"
             style={{ display: 'flex', alignItems: 'flex-end', gap: 18, flexWrap: 'wrap' }}
           >
-            <AnswerOrb size={60} />
             <div>
               <div
                 style={{
@@ -248,8 +246,8 @@ export default function SampleScreen({ navigate }: SampleScreenProps) {
               Identity
             </div>
             <p style={{ fontSize: 20, lineHeight: '28px', margin: 0, fontWeight: 300 }}>
-              An American state known for its significant role in colonial history, the
-              Civil War, and its distinctive coastal culture.
+              A coastal Southern state whose clues keep circling back to colonial
+              history, the Civil War, and Charleston.
             </p>
           </div>
 

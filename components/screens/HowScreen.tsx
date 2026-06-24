@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 const steps = [
   { n: '01', t: 'Pick a category', d: 'Literature, Science, Fine Arts, or History — plus a difficulty level that matches your play.' },
   { n: '02', t: 'We mine real questions', d: 'We pull past tossups on a high-yield answerline from real Quizbowl data and strip the noise.' },
-  { n: '03', t: 'You learn the clues', d: 'The highest-value clues — plus the explanations behind them — arrive in your inbox in one clean email each morning. Train recognition.' },
+  { n: '03', t: 'You learn the clues', d: 'The highest-value clues, with the explanation behind each one, land in your inbox in a single email every morning.' },
 ]
 
 const anatomy = [
@@ -146,8 +146,8 @@ export default function HowScreen({ navigate }: HowScreenProps) {
               fontWeight: 300,
             }}
           >
-            Raw question history, turned into repeatable training. No app to open,
-            no flashcards to grind — just recognition, delivered.
+            We take real question history and turn it into something you can
+            actually study. No app to open, no flashcards to grind through.
           </p>
         </div>
       </div>

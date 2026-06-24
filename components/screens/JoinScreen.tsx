@@ -90,7 +90,7 @@ export default function JoinScreen() {
             }}
           >
             Pick a category and difficulty. We handle the rest — a fresh high-yield
-            answerline in your inbox each morning at 6am.
+            answerline in your inbox each morning at 8am.
           </p>
           <div
             className="info-el"
@@ -121,6 +121,32 @@ export default function JoinScreen() {
               </div>
             ))}
           </div>
+
+          {/* Mobile-only: direct link to the signup form (hidden on desktop) */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScJhHjmwffcgL9KmssVr4RcOFWooZ_IWVHg9gozpFWp-PT3Rw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info-el al-join-mobile-cta"
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
+              marginTop: 28,
+              padding: '16px 24px',
+              borderRadius: 6,
+              background: '#e60000',
+              color: '#fff',
+              fontSize: 16,
+              fontWeight: 800,
+              letterSpacing: '0.3px',
+              textTransform: 'uppercase',
+              textDecoration: 'none',
+              textAlign: 'center',
+            }}
+          >
+            Sign up ›
+          </a>
         </div>
 
         {/* Right — form */}

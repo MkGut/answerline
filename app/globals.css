@@ -41,6 +41,7 @@ html {
 /* Hidden on desktop by default — only surfaced inside the mobile query */
 .al-nav-burger { display: none; }
 .al-nav-panel { display: none; }
+.al-join-mobile-cta { display: none; }
 
 @media (max-width: 860px) {
   /* Tighter side gutters on every page shell */
@@ -104,6 +105,10 @@ html {
   .al-join-info {
     position: static !important;
     top: auto !important;
+  }
+  /* Surface the direct signup link only on mobile */
+  .al-join-mobile-cta {
+    display: flex !important;
   }
 }
 

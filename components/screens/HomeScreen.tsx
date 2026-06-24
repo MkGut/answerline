@@ -18,7 +18,7 @@ const categories = [
 
 const learnRows = [
   { tag: 'Early clues', title: 'The obscure lead-in that only the prepared recognize.' },
-  { tag: 'Middle clues', title: 'The connective tissue — people, places, and battles.' },
+  { tag: 'Middle clues', title: 'The people, places, and battles that link the lead-in to the giveaway.' },
   { tag: 'Giveaways & traps', title: 'The easy line, and the lookalikes that cost the buzz.' },
 ]
 
@@ -231,8 +231,9 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
                   fontWeight: 300,
                 }}
               >
-                Real Quizbowl questions, distilled into one short study email a day.
-                Learn the clues behind the answer — not another pile of random facts.
+                Real Quizbowl questions, boiled down to one short email a day.
+                You learn the clues that point to the answer instead of memorizing
+                loose trivia.
               </p>
 
               <div ref={ctaBtnsRef} className="al-hero-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -332,8 +333,8 @@ export default function HomeScreen({ navigate }: HomeScreenProps) {
                 maxWidth: 460,
               }}
             >
-              An American state recognized by its colonial and antebellum history,
-              the port of Charleston, and a deep literary trail.
+              A coastal Southern state. Its clues cluster around the colonial era,
+              the port of Charleston, and a long line of novelists.
             </p>
             <div style={{ marginTop: 'auto', display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <span
